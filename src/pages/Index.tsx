@@ -3,7 +3,6 @@ import React from 'react';
 import { CheckCircle, Zap, Shield, Truck, Star, ArrowRight } from 'lucide-react';
 import CountdownTimer from '../components/CountdownTimer';
 import UnitCounter from '../components/UnitCounter';
-import PriceComparison from '../components/PriceComparison';
 import { Button } from '@/components/ui/button';
 
 const Index = () => {
@@ -60,9 +59,6 @@ const Index = () => {
             </div>
           </div>
         </div>
-
-        {/* Comparação de Preços */}
-        <PriceComparison />
 
         {/* Benefícios */}
         <div className="bg-white p-8 rounded-lg shadow-lg mb-8 max-w-4xl mx-auto">
