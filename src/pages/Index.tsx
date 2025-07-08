@@ -17,7 +17,7 @@ const Index = () => {
       <header className="bg-white shadow-sm border-b border-orange-200">
         <div className="container mx-auto px-4 py-4 flex items-center justify-center">
           <img 
-            src="/lovable-uploads/58217aea-938c-41fb-85b6-43b64b608b90.png" 
+            src="/lovable-uploads/c719e6c2-03ce-4711-94c6-6833c2d43367.png" 
             alt="O Gerador Perdido" 
             className="h-16 md:h-20"
           />
