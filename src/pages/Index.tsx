@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CheckCircle, Zap, Shield, Truck, Star, ArrowRight } from 'lucide-react';
 import CountdownTimer from '../components/CountdownTimer';
@@ -7,8 +6,7 @@ import { Button } from '@/components/ui/button';
 
 const Index = () => {
   const handlePurchase = () => {
-    // Aqui você adicionaria a lógica de compra
-    console.log('Redirecionando para checkout...');
+    window.open('https://shop260.pay.yampi.com.br/r/TN1DBCDYJ4', '_blank');
   };
 
   return (
@@ -129,7 +127,6 @@ const Index = () => {
             </h2>
             <p className="text-sm md:text-lg mb-6 opacity-90">
               Garante já sua unidade do Gerador Perdido montado por apenas R$ 297
-              (R$ 200 MENOS que o manual!)
             </p>
             <Button 
               onClick={handlePurchase}
@@ -157,7 +154,7 @@ const Index = () => {
       <footer className="bg-gray-800 text-white py-8 mt-12">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm opacity-75">
-            © 2024 O Gerador Perdido. Todos os direitos reservados.
+            © 2025 O Gerador Perdido. Todos os direitos reservados.
           </p>
         </div>
       </footer>
