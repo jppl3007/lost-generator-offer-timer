@@ -123,23 +123,25 @@ const Index = () => {
 
         {/* CTA Final */}
         <div className="text-center max-w-2xl mx-auto">
-          <div className="bg-gradient-to-r from-orange-500 to-red-500 p-8 rounded-lg text-white mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          <div className="bg-gradient-to-r from-orange-500 to-red-500 p-6 md:p-8 rounded-lg text-white mb-6">
+            <h2 className="text-xl md:text-3xl font-bold mb-4">
               Última Chance!
             </h2>
-            <p className="text-lg mb-6 opacity-90">
-              Garante já sua unidade do Gerador Perdido montado por apenas R$ 397
-              (R$ 100 MENOS que o manual!)
+            <p className="text-base md:text-lg mb-6 opacity-90">
+              Garante já sua unidade do Gerador Perdido montado por apenas R$ 297
+              (R$ 200 MENOS que o manual!)
             </p>
             <Button 
               onClick={handlePurchase}
               size="lg"
-              className="bg-white text-orange-600 hover:bg-gray-100 font-bold text-xl px-8 py-4 rounded-full transform hover:scale-105 transition-all duration-200 shadow-lg"
+              className="w-full md:w-auto bg-white text-orange-600 hover:bg-gray-100 font-bold text-base md:text-xl px-6 md:px-8 py-3 md:py-4 rounded-full transform hover:scale-105 transition-all duration-200 shadow-lg h-auto"
             >
-              QUERO MINHA UNIDADE MONTADA AGORA
-              <ArrowRight className="ml-2 w-6 h-6" />
+              <span className="text-center">
+                QUERO MINHA UNIDADE MONTADA AGORA
+              </span>
+              <ArrowRight className="ml-2 w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
             </Button>
-            <p className="text-sm mt-4 opacity-80">
+            <p className="text-xs md:text-sm mt-4 opacity-80">
               ✅ Pagamento 100% Seguro | ✅ Entrega Garantida | ✅ 30 dias de Garantia
             </p>
           </div>
