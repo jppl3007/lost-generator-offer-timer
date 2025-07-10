@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { CheckCircle, Zap, Shield, Truck, Star, ArrowRight } from 'lucide-react';
 import CountdownTimer from '../components/CountdownTimer';
@@ -87,26 +88,6 @@ const Index = () => {
           </p>
         </div>
 
-        {/* Timer e Estoque */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
-          <CountdownTimer />
-          <UnitCounter />
-        </div>
-
-        {/* Urgência */}
-        <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8 max-w-4xl mx-auto">
-          <div className="flex items-center gap-3">
-            <Zap className="w-8 h-8 text-red-500" />
-            <div>
-              <h3 className="text-lg font-bold text-red-800">ATENÇÃO: Esta oferta expira em 5 minutos!</h3>
-              <p className="text-red-700">
-                Apenas <strong>3 unidades</strong> disponíveis para compradores selecionados. 
-                Não perca esta oportunidade única!
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Video Section */}
         <div className="max-w-md mx-auto mb-12">
           <div className="bg-white p-4 rounded-lg shadow-lg">
@@ -125,6 +106,26 @@ const Index = () => {
                   overflow: 'hidden'
                 }}
               />
+            </div>
+          </div>
+        </div>
+
+        {/* Timer e Estoque */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
+          <CountdownTimer />
+          <UnitCounter />
+        </div>
+
+        {/* Urgência */}
+        <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8 max-w-4xl mx-auto">
+          <div className="flex items-center gap-3">
+            <Zap className="w-8 h-8 text-red-500" />
+            <div>
+              <h3 className="text-lg font-bold text-red-800">ATENÇÃO: Esta oferta expira em 5 minutos!</h3>
+              <p className="text-red-700">
+                Apenas <strong>3 unidades</strong> disponíveis para compradores selecionados. 
+                Não perca esta oportunidade única!
+              </p>
             </div>
           </div>
         </div>
