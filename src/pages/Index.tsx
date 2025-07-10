@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CheckCircle, Zap, Shield, Truck, Star, ArrowRight } from 'lucide-react';
 import CountdownTimer from '../components/CountdownTimer';
 import UnitCounter from '../components/UnitCounter';
@@ -8,6 +8,55 @@ const Index = () => {
   const handlePurchase = () => {
     window.open('https://shop260.pay.yampi.com.br/r/TN1DBCDYJ4', '_blank');
   };
+
+  useEffect(() => {
+    // Add performance script
+    const perfScript = document.createElement('script');
+    perfScript.innerHTML = `!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);`;
+    document.head.appendChild(perfScript);
+
+    // Add preload links
+    const preloadLinks = [
+      { href: 'https://scripts.converteai.net/28d41dbd-cd23-4eac-a930-66e1aca584eb/players/68701dd74d1859eebbd823a5/v4/player.js', as: 'script' },
+      { href: 'https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js', as: 'script' },
+      { href: 'https://cdn.converteai.net/28d41dbd-cd23-4eac-a930-66e1aca584eb/68701dc4a0cd8dc433931e60/main.m3u8', as: 'fetch' }
+    ];
+
+    preloadLinks.forEach(linkData => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = linkData.href;
+      link.as = linkData.as;
+      document.head.appendChild(link);
+    });
+
+    // Add DNS prefetch links
+    const dnsPrefetchDomains = [
+      'https://cdn.converteai.net',
+      'https://scripts.converteai.net',
+      'https://images.converteai.net',
+      'https://api.vturb.com.br'
+    ];
+
+    dnsPrefetchDomains.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'dns-prefetch';
+      link.href = domain;
+      document.head.appendChild(link);
+    });
+
+    // Add video player script
+    const videoScript = document.createElement('script');
+    videoScript.src = 'https://scripts.converteai.net/28d41dbd-cd23-4eac-a930-66e1aca584eb/players/68701dd74d1859eebbd823a5/v4/player.js';
+    videoScript.async = true;
+    document.head.appendChild(videoScript);
+
+    return () => {
+      // Cleanup scripts on unmount
+      const scripts = document.querySelectorAll('script[src*="converteai.net"]');
+      scripts.forEach(script => script.remove());
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white">
@@ -54,6 +103,28 @@ const Index = () => {
                 Apenas <strong>3 unidades</strong> disponíveis para compradores selecionados. 
                 Não perca esta oportunidade única!
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Video Section */}
+        <div className="max-w-md mx-auto mb-12">
+          <div className="bg-white p-4 rounded-lg shadow-lg">
+            <h3 className="text-xl font-bold text-center mb-4 text-gray-800">
+              Veja como funciona na prática:
+            </h3>
+            <div className="relative">
+              <vturb-smartplayer 
+                id="vid-68701dd74d1859eebbd823a5" 
+                style={{
+                  display: 'block',
+                  margin: '0 auto',
+                  width: '100%',
+                  maxWidth: '400px',
+                  borderRadius: '8px',
+                  overflow: 'hidden'
+                }}
+              />
             </div>
           </div>
         </div>
